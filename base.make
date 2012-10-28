@@ -12,7 +12,7 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.15
+projects[drupal] = 7.16
 
 ;
 ;
@@ -36,11 +36,8 @@ projects[admin][subdir] = "contrib"
 projects[apachesolr][version] = "1.0-rc3"
 projects[apachesolr][subdir] = "contrib"
 
-; Block as entities, with UUID and services support patches.
-;projects[bean][version] = "1.0-rc5+8-dev"
-projects[bean][type] = "module"
-projects[bean][download][type] = "git"
-projects[bean][download][revision] = "6c49e1d"
+; Block as entities.
+projects[bean][version] = "1.0-rc6"
 projects[bean][subdir] = "contrib"
 
 ; The CDN module helps improve page load times, even without a CDN.
@@ -57,8 +54,12 @@ projects[context][patch][block-reaction-weights][url] = "http://drupal.org/files
 projects[context][patch][block-reaction-weights][md5] = "b4e91b1373a749aa8fa19c8509ef3a80"
 projects[context][subdir] = "contrib"
 
+; Context UUID for UUID aware context conditions
+projects[context_uuid][version] = "1.0-beta2"
+projects[context][subdir] = "contrib"
+
 ; Most sites need a date field somewhere.
-projects[date][version] = "2.3"
+projects[date][version] = "2.6"
 projects[date][subdir] = "contrib"
 
 ; When enabling revisions, diff is very useful. 3.x supports entity diff.
@@ -70,7 +71,7 @@ projects[entity][version] = "1.0-rc3"
 projects[entity][subdir] = "contrib"
 
 ; Entity Reference is the most efficient way to reference entities.
-projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][version] = "1.0-rc5"
 projects[entityreference][subdir] = "contrib"
 
 ; Make not found errors more efficient.
@@ -116,6 +117,10 @@ projects[link][subdir] = "contrib"
 ;projects[location][download][revision] = "81ea777bcd410511cfbcb1dd5831d8cfb0fb2992"
 ;projects[location][subdir] = "contrib"
 
+; Library handling
+projects[libraries] = "2.0"
+projects[libraries][subdir] = "contrib"
+
 ; Digital asset management.
 projects[media][version] = "1.2"
 projects[media][subdir] = "contrib"
@@ -151,14 +156,14 @@ projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
 ; Simple health check module.
-projects[ping][version] = "1.0-beta1"
+projects[ping][version] = "1.0"
 projects[ping][subdir] = "contrib"
 
 ; Redirects with UUID patch.
-projects[redirect][version] = "1.0-beta4"
+projects[redirect][version] = "1.0-rc1"
 projects[redirect][subdir] = "contrib"
-projects[redirect][patch][uuid-support][url] = "http://drupal.org/files/1517348_0.patch"
-projects[redirect][patch][uuid-support][md5] = "e2a9cdd9909211cb78bb60065f3b7423"
+projects[redirect][patch][uuid-support][url] = "https://drupal.org/files/redirect-1517348-uuid-9.patch"
+projects[redirect][patch][uuid-support][md5] = "2f0b8ba8e56cfda2fcd4a88e3f1bb0ba"
 
 ; Human friendly usernames.
 projects[realname][version] = "1.0"
@@ -173,7 +178,7 @@ projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
 ; Data placeholders.
-projects[token][version] = "1.2"
+projects[token][version] = "1.4"
 projects[token][subdir] = "contrib"
 
 ; Universally Unique IDentifiers - aka portable entities.
@@ -181,6 +186,9 @@ projects[uuid][type] = "module"
 projects[uuid][download][type] = "git"
 projects[uuid][download][revision] = "4730c67"
 projects[uuid][subdir] = "contrib"
+
+projects[uuid_entity_autocomplete][version] = "1.0-beta1"
+projects[uuid_entity_autocomplete][subdir] = "contrib"
 
 ; i18n support for variables.
 ;projects[variable][version] = "2.1"
