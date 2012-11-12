@@ -12,7 +12,7 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.16
+projects[drupal] = 7.17
 
 ;
 ;
@@ -25,7 +25,7 @@ projects[drupal] = 7.16
 ;
 
 ; Enable for clients using Acquia Network.
-;projects[acquia_connector][version] = "2.7"
+;projects[acquia_connector][version] = "2.8"
 ;projects[acquia_connector][subdir] = "contrib"
 
 ; Drill down admin menu.
@@ -33,7 +33,7 @@ projects[admin][version] = "2.0-beta3"
 projects[admin][subdir] = "contrib"
 
 ; Core site search doesn't scale, we should always use Solr.
-projects[apachesolr][version] = "1.0-rc3"
+projects[apachesolr][version] = "1.1"
 projects[apachesolr][subdir] = "contrib"
 
 ; Block as entities.
@@ -56,18 +56,24 @@ projects[context][subdir] = "contrib"
 
 ; Context UUID for UUID aware context conditions
 projects[context_uuid][version] = "1.0-beta2"
-projects[context][subdir] = "contrib"
+projects[context_uuid][subdir] = "contrib"
 
 ; Most sites need a date field somewhere.
 projects[date][version] = "2.6"
 projects[date][subdir] = "contrib"
 
 ; When enabling revisions, diff is very useful. 3.x supports entity diff.
-projects[diff][version] = "3.0-alpha1"
+projects[diff][version] = "3.1"
 projects[diff][subdir] = "contrib"
 
 ; UUID needs Entity API as can most custom modules.
 projects[entity][version] = "1.0-rc3"
+; Add file create support - breaks entity tests
+projects[entity][patch][file-create][url] = "http://drupal.org/files/entity-1741028-file-creation-callback.patch"
+projects[entity][patch][file-create][md5] = "efabb88785272e029a9c04dee35a9895"
+; Add entity_uri support callback for files
+projects[entity][patch][file-uri][url] = "https://drupal.org/files/entity-1481372-entity_uri_file.patch"
+projects[entity][patch][file-uri][md5] = "4c13c2a7d79bd4971218e14504e521ed"
 projects[entity][subdir] = "contrib"
 
 ; Entity Reference is the most efficient way to reference entities.
@@ -79,7 +85,7 @@ projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 
 ; The best way to export configuration in Drupal 7.
-projects[features][version] = "1.0"
+projects[features][version] = "2.0-beta1"
 projects[features][subdir] = "contrib"
 
 ; Helper module for building features.
@@ -198,12 +204,8 @@ projects[uuid_entity_autocomplete][subdir] = "contrib"
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
-; WYSIWYG editor with lots of patches include config export to features.
-projects[wysiwyg][type] = "module"
-projects[wysiwyg][download][type] = "git"
-projects[wysiwyg][download][url] = "http://git.drupal.org/project/wysiwyg.git"
-projects[wysiwyg][download][revision] = "3e7568e8b8ed077caadcac4dfa147fb394b0b041"
-;projects[wysiwyg][download][branch] = "7.x-2.x"
+; WYSIWYG editor
+projects[wysiwyg][download][branch] = "7.x-2.2"
 projects[wysiwyg][subdir] = "contrib"
 
 ; XML sitemaps to improve spridering.
@@ -226,7 +228,7 @@ projects[xmlsitemap][subdir] = "contrib"
 ;
 
 ; Code reviews.
-projects[coder][version] = "1.0"
+projects[coder][version] = "1.2"
 projects[coder][subdir] = "dev"
 
 ; Can't develop a site without devel.
@@ -250,7 +252,7 @@ projects[mothership] = "2.8"
 
 ; CKEditor for WYSIWYG - consider switching Aloha when it stablises.
 libraries[ckeditor][download][type]= "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5.2/ckeditor_3.5.2.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.5/ckeditor_3.6.5.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
 
