@@ -66,6 +66,10 @@ projects[date][subdir] = "contrib"
 projects[diff][version] = "3.1"
 projects[diff][subdir] = "contrib"
 
+; Sync a media/file/image field with the assets embedded in a field.
+projects[embed_assets_field][version] = "1.0-alpha1"
+projects[embed_assets_field][subdir] = "contrib"
+
 ; UUID needs Entity API as can most custom modules.
 projects[entity][version] = "1.0-rc3"
 ; Add file create support - breaks entity tests
