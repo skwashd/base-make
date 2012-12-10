@@ -61,7 +61,7 @@ projects[date][version] = "2.6"
 projects[date][subdir] = "contrib"
 
 ; When enabling revisions, diff is very useful. 3.x supports entity diff.
-projects[diff][version] = "3.1"
+projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
 ; Sync a media/file/image field with the assets embedded in a field.
@@ -79,14 +79,14 @@ projects[entity][patch][file-uri][md5] = "4c13c2a7d79bd4971218e14504e521ed"
 projects[entity][subdir] = "contrib"
 
 ; Entity Reference is the most efficient way to reference entities.
-projects[entityreference][version] = "1.0-rc5"
+projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
 ; Make not found errors more efficient.
 projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 
-; The best way to export configuration in Drupal 7.
+; The best way to export configuration in Drupal 7 with the improved UI.
 projects[features][version] = "2.0-beta1"
 projects[features][subdir] = "contrib"
 
@@ -95,7 +95,7 @@ projects[features_orphans][version] = "1.1"
 projects[features_orphans][subdir] = "contrib"
 
 ; Feeds is great for migating/importing data.
-;projects[feeds][version] = "2.0-alpha5"
+;projects[feeds][version] = "2.0-alpha7"
 ;projects[feeds][subdir] = "contrib"
 
 ; Force timestamp is handy for testing ERS.
@@ -195,8 +195,13 @@ projects[uuid][download][type] = "git"
 projects[uuid][download][revision] = "4730c67"
 projects[uuid][subdir] = "contrib"
 
+; Autocomplete lookup for UUIDs.
 projects[uuid_entity_autocomplete][version] = "1.0-beta1"
 projects[uuid_entity_autocomplete][subdir] = "contrib"
+
+; Link to content using UUIDs rather than non portable URLs or entity ids.
+projects[uuid_link][version] = "1.0-beta3"
+projects[uuid_link][subdir] = "contrib"
 
 ; i18n support for variables.
 ;projects[variable][version] = "2.1"
