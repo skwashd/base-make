@@ -48,10 +48,8 @@ projects[cdn][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
-; Context for layout management, with a block weight fix.
-projects[context][version] = "3.0-beta4"
-projects[context][patch][block-reaction-weights][url] = "http://drupal.org/files/context-1439134-undefined_weight_fix-32.patch"
-projects[context][patch][block-reaction-weights][md5] = "b4e91b1373a749aa8fa19c8509ef3a80"
+; Context for layout management.
+projects[context][version] = "3.0-beta5"
 projects[context][subdir] = "contrib"
 
 ; Context UUID for UUID aware context conditions
