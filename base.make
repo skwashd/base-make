@@ -209,7 +209,7 @@ projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
 ; WYSIWYG editor
-projects[wysiwyg][download][branch] = "7.x-2.2"
+projects[wysiwyg][download][branch] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
 ; XML sitemaps to improve spridering.
