@@ -250,6 +250,10 @@ projects[environment_indicator][subdir] = "dev"
 ; aaaaarr! We need a clean HTML5 base theme.
 projects[mothership] = "2.8"
 
+; A nice admin theme
+projects[shiny] = "1.0"
+
+
 ;
 ; Libraries
 ;
