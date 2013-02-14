@@ -12,7 +12,7 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.17
+projects[drupal] = 7.19
 
 ;
 ;
@@ -37,7 +37,7 @@ projects[apachesolr][version] = "1.1"
 projects[apachesolr][subdir] = "contrib"
 
 ; Block as entities.
-projects[bean][version] = "1.0-rc6"
+projects[bean][version] = "1.0"
 projects[bean][subdir] = "contrib"
 
 ; The CDN module helps improve page load times, even without a CDN.
@@ -49,7 +49,7 @@ projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
 ; Context for layout management.
-projects[context][version] = "3.0-beta5"
+projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
 ; Context UUID for UUID aware context conditions
@@ -69,7 +69,7 @@ projects[embed_assets_field][version] = "1.0-alpha1"
 projects[embed_assets_field][subdir] = "contrib"
 
 ; UUID needs Entity API as can most custom modules.
-projects[entity][version] = "1.0-rc3"
+projects[entity][version] = "1.0"
 ; Add file create support - breaks entity tests
 projects[entity][patch][file-create][url] = "http://drupal.org/files/entity-1741028-file-creation-callback.patch"
 projects[entity][patch][file-create][md5] = "efabb88785272e029a9c04dee35a9895"
@@ -91,31 +91,28 @@ projects[features][version] = "2.0-beta1"
 projects[features][subdir] = "contrib"
 
 ; Helper module for building features.
-projects[features_orphans][version] = "1.1"
-projects[features_orphans][subdir] = "contrib"
+; Commented out as it doesn't work with features 2.0-beta1
+;projects[features_orphans][version] = "1.1"
+;projects[features_orphans][subdir] = "contrib"
 
 ; Feeds is great for migating/importing data.
 ;projects[feeds][version] = "2.0-alpha7"
 ;projects[feeds][subdir] = "contrib"
-
-; Force timestamp is handy for testing ERS.
-;projects[force_timestamp][version] = "1.0-beta1"
-;projects[force_timestamp][subdir] = "contrib"
 
 ; Prevents duplicate URLs.
 projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
 ; Use for multilingual sites.
-;projects[i18n][version] = "1.7"
+;projects[i18n][version] = "1.8"
 ;projects[i18n][subdir] = "contrib"
 
 ; Dependency for Feeds
-;projects[job_scheduler][version] = "1.0-beta3"
+;projects[job_scheduler][version] = "2.0-alpha3"
 ;projects[job_scheduler][subdir] = "contrib"
 
 ; Link fields.
-projects[link][version] = "1.0"
+projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
 ; Enable when geographic data is needed.
@@ -204,7 +201,7 @@ projects[uuid_link][version] = "1.0-beta3"
 projects[uuid_link][subdir] = "contrib"
 
 ; i18n support for variables.
-;projects[variable][version] = "2.1"
+;projects[variable][version] = "2.2"
 ;projects[variable][subdir] = "contrib"
 
 ; Custom data lists.
@@ -212,11 +209,11 @@ projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
 ; WYSIWYG editor
-projects[wysiwyg][download][branch] = "2.2"
+projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
 ; XML sitemaps to improve spridering.
-projects[xmlsitemap][version] = "2.0-rc1"
+projects[xmlsitemap][version] = "2.0-rc2"
 projects[xmlsitemap][subdir] = "contrib"
 
 ;
@@ -226,7 +223,7 @@ projects[xmlsitemap][subdir] = "contrib"
 ; Export translated variables to features.
 ;projects[fe_variable_i18n][type] = "module"
 ;projects[fe_variable_i18n][download][type] = "git"
-;projects[fe_variable_i18n][download][url] = "git@github.com:liip/fe_variable_i18n.git"
+;projects[fe_variable_i18n][download][url] = "git://github.com/skwashd/fe_variable_i18n.git"
 ;projects[fe_variable_i18n][download][revision] = "98735f6954ef41c27144c04017a4b68f3768a6ee"
 ;projects[fe_variable_i18n][subdir] = "git"
 
@@ -235,7 +232,7 @@ projects[xmlsitemap][subdir] = "contrib"
 ;
 
 ; Code reviews.
-projects[coder][version] = "1.2"
+projects[coder][version] = "2.0-beta2"
 projects[coder][subdir] = "dev"
 
 ; Can't develop a site without devel.
@@ -259,7 +256,7 @@ projects[mothership] = "2.8"
 
 ; CKEditor for WYSIWYG - consider switching Aloha when it stablises.
 libraries[ckeditor][download][type]= "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.5/ckeditor_3.6.5.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6/ckeditor_3.6.6.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
 
