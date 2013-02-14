@@ -208,7 +208,11 @@ projects[uuid_link][subdir] = "contrib"
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
-; WYSIWYG editor
+; Data capture forms.
+projects[webform][version] = "3.18"
+projects[webform][subdir] = "contrib"
+
+; WYSIWYG editor.
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
