@@ -12,7 +12,10 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.22
+projects[pantheon][type] = "core"
+projects[pantheon][download][type] = "git"
+projects[pantheon][download][url] = "git://github.com/pantheon-systems/drops-7.git"
+projects[pantheon][download][revision] = "7.22"
 
 ;
 ;
