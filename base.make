@@ -1,4 +1,4 @@
-; Technocrat base Drupal 7 make file.
+; Dave Hall Consulting base Drupal 7 make file.
 ;
 ; This is used as a foundation for all Technocrat site builds.
 ;
@@ -12,7 +12,7 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.19
+projects[drupal] = 7.22
 
 ;
 ;
@@ -29,23 +29,28 @@ projects[drupal] = 7.19
 ;projects[acquia_connector][subdir] = "contrib"
 
 ; Drill down admin menu.
-projects[admin][version] = "2.0-beta3"
-projects[admin][subdir] = "contrib"
+; Prefer to use navbar module instead now.
+; projects[admin][version] = "2.0-beta3"
+; projects[admin][subdir] = "contrib"
 
 ; Core site search doesn't scale, we should always use Solr.
 projects[apachesolr][version] = "1.1"
 projects[apachesolr][subdir] = "contrib"
 
 ; Block as entities.
-projects[bean][version] = "1.0"
+projects[bean][version] = "1.1"
 projects[bean][subdir] = "contrib"
 
+; Dependency for navbar module.
+projects[breakpoints][version] = "1.0"
+projects[breakpoints][subdir] = "contrib"
+
 ; The CDN module helps improve page load times, even without a CDN.
-projects[cdn][version] = "2.5"
+projects[cdn][version] = "2.6"
 projects[cdn][subdir] = "contrib"
 
 ; CTools is a dependency for Views and Features.
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
 ; Context for layout management.
@@ -87,12 +92,12 @@ projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 
 ; The best way to export configuration in Drupal 7 with the improved UI.
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.0-beta2"
 projects[features][subdir] = "contrib"
 
 ; Helper module for building features.
-; Commented out as it doesn't work with features 2.0-beta1
-;projects[features_orphans][version] = "1.1"
+; Commented out as it doesn't work with features 2.x
+;projects[features_orphans][version] = "1.2"
 ;projects[features_orphans][subdir] = "contrib"
 
 ; Feeds is great for migating/importing data.
@@ -116,18 +121,19 @@ projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
 ; Enable when geographic data is needed.
-;projects[location][version] = "3.0-alpha1"
-;projects[location][type] = "module"
-;projects[location][download][type] = "git"
-;projects[location][download][revision] = "81ea777bcd410511cfbcb1dd5831d8cfb0fb2992"
+;projects[location][version] = "3.0-alpha8"
 ;projects[location][subdir] = "contrib"
 
 ; Library handling
-projects[libraries] = "2.0"
+projects[libraries] = "2.1"
 projects[libraries][subdir] = "contrib"
 
+; Respond with 404 not found instead of 403 access denied.
+projects[m4032404][version] = "1.0-beta1"
+projects[m4032404][subdir] = "contrib"
+
 ; Digital asset management.
-projects[media][version] = "1.2"
+projects[media][version] = "1.3"
 projects[media][subdir] = "contrib"
 projects[media][patch][uuid-support][url] = "http://drupal.org/files/1515788.patch"
 projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
@@ -140,21 +146,36 @@ projects[media_browser_plus][subdir] = "contrib"
 projects[memcache][version] = "1.0"
 projects[memcache][subdir] = "contrib"
 
+; Alternative video source.
+projects[media_vimeo][version] = "1.0-beta5"
+projects[media_vimeo][subdir] = "contrib"
+
 ; Most sites need embedded video.
 projects[media_youtube][version] = "1.0-beta3"
 projects[media_youtube][subdir] = "contrib"
 
+; One module dev environment setup.
+projects[meta_dev][version] = "1.0-beta1"
+projects[meta_dev][subdir] = "dev"
+
 ; Lightweight meta tags.
-projects[metatags_quick][version] = "2.5"
+projects[metatags_quick][version] = "2.7"
 projects[metatags_quick][subdir] = "contrib"
 
 ; Improved module admin page.
 projects[module_filter][version] = "1.7"
 projects[module_filter][subdir] = "contrib"
+; Makes module filter work with latest jQuery UI.
+projects[module_filter][patch][jqueryup-fix][url] = "https://drupal.org/files/jquery-ui-button-makes-module-filter-fail-1933384-2.patch"
+projects[module_filter][patch][jqueryup-fix][md5] = "06e5f34c68244e95ad3f01619870b731"
 
 ; Better UI of nodes in multiple menus.
 projects[multiple_node_menu][version] = "1.0-beta1"
 projects[multiple_node_menu][subdir] = "contrib"
+
+; Backport of the Drupal 8 responsive navigation toolbar
+projects[navbar][version] = "1.0-alpha7"
+projects[navbar][subdir] = "contrib"
 
 ; SEO friendly URLs.
 projects[pathauto][version] = "1.2"
@@ -170,8 +191,12 @@ projects[redirect][subdir] = "contrib"
 projects[redirect][patch][uuid-support][url] = "https://drupal.org/files/redirect-1517348-uuid-9.patch"
 projects[redirect][patch][uuid-support][md5] = "2f0b8ba8e56cfda2fcd4a88e3f1bb0ba"
 
+; Alternative caching backend - use on Pantheon.
+projects[redis][version] = "2.0-beta4"
+projects[redis][subdir] = "contrib"
+
 ; Human friendly usernames.
-projects[realname][version] = "1.0"
+projects[realname][version] = "1.1"
 projects[realname][subdir] = "contrib"
 
 ; Restrict access to RSS.
@@ -183,7 +208,7 @@ projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
 ; Data placeholders.
-projects[token][version] = "1.4"
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
 ; Universally Unique IDentifiers - aka portable entities.
@@ -205,7 +230,7 @@ projects[uuid_link][subdir] = "contrib"
 ;projects[variable][subdir] = "contrib"
 
 ; Custom data lists.
-projects[views][version] = "3.5"
+projects[views][version] = "3.6"
 projects[views][subdir] = "contrib"
 
 ; Data capture forms.
@@ -232,22 +257,6 @@ projects[xmlsitemap][subdir] = "contrib"
 ;projects[fe_variable_i18n][subdir] = "git"
 
 ;
-; Development related tools
-;
-
-; Code reviews.
-projects[coder][version] = "2.0-beta2"
-projects[coder][subdir] = "dev"
-
-; Can't develop a site without devel.
-projects[devel][version] = "1.3"
-projects[devel][subdir] = "dev"
-
-; Avoid confusion about which environment is being used.
-projects[environment_indicator][version] = "1.1"
-projects[environment_indicator][subdir] = "dev"
-
-;
 ; Themes
 ;
 
@@ -255,7 +264,7 @@ projects[environment_indicator][subdir] = "dev"
 projects[mothership] = "2.8"
 
 ; A nice admin theme
-projects[shiny] = "1.0"
+projects[shiny] = "1.1"
 
 
 ;
