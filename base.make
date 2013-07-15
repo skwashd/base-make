@@ -1,6 +1,6 @@
-; Dave Hall Consulting base Drupal 7 make file.
 ;
-; This is used as a foundation for all Technocrat site builds.
+; Dave Hall Consulting base Drupal 7 make file.
+; http://davehall.com.au
 ;
 
 api = 2
@@ -25,7 +25,7 @@ projects[drupal] = 7.22
 ;
 
 ; Enable for clients using Acquia Network.
-;projects[acquia_connector][version] = "2.8"
+;projects[acquia_connector][version] = "2.10"
 ;projects[acquia_connector][subdir] = "contrib"
 
 ; Drill down admin menu.
@@ -34,15 +34,15 @@ projects[drupal] = 7.22
 ; projects[admin][subdir] = "contrib"
 
 ; Core site search doesn't scale, we should always use Solr.
-projects[apachesolr][version] = "1.1"
+projects[apachesolr][version] = "1.3"
 projects[apachesolr][subdir] = "contrib"
 
 ; Block as entities.
-projects[bean][version] = "1.1"
+projects[bean][version] = "1.2"
 projects[bean][subdir] = "contrib"
 
 ; Dependency for navbar module.
-projects[breakpoints][version] = "1.0"
+projects[breakpoints][version] = "1.1"
 projects[breakpoints][subdir] = "contrib"
 
 ; The CDN module helps improve page load times, even without a CDN.
@@ -74,7 +74,7 @@ projects[embed_assets_field][version] = "1.0-alpha1"
 projects[embed_assets_field][subdir] = "contrib"
 
 ; UUID needs Entity API as can most custom modules.
-projects[entity][version] = "1.0"
+projects[entity][version] = "1.1"
 ; Add file create support - breaks entity tests
 projects[entity][patch][file-create][url] = "http://drupal.org/files/entity-1741028-file-creation-callback.patch"
 projects[entity][patch][file-create][md5] = "efabb88785272e029a9c04dee35a9895"
@@ -92,7 +92,7 @@ projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 
 ; The best way to export configuration in Drupal 7 with the improved UI.
-projects[features][version] = "2.0-beta2"
+projects[features][version] = "2.0-rc1"
 projects[features][subdir] = "contrib"
 
 ; Helper module for building features.
@@ -101,7 +101,7 @@ projects[features][subdir] = "contrib"
 ;projects[features_orphans][subdir] = "contrib"
 
 ; Feeds is great for migating/importing data.
-;projects[feeds][version] = "2.0-alpha7"
+;projects[feeds][version] = "2.0-alpha8"
 ;projects[feeds][subdir] = "contrib"
 
 ; Prevents duplicate URLs.
@@ -109,7 +109,7 @@ projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
 ; Use for multilingual sites.
-;projects[i18n][version] = "1.8"
+;projects[i18n][version] = "1.9"
 ;projects[i18n][subdir] = "contrib"
 
 ; Dependency for Feeds
@@ -121,7 +121,7 @@ projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
 ; Enable when geographic data is needed.
-;projects[location][version] = "3.0-alpha8"
+;projects[location][version] = "3.0-rc2"
 ;projects[location][subdir] = "contrib"
 
 ; Library handling
@@ -129,7 +129,7 @@ projects[libraries] = "2.1"
 projects[libraries][subdir] = "contrib"
 
 ; Respond with 404 not found instead of 403 access denied.
-projects[m4032404][version] = "1.0-beta1"
+projects[m4032404][version] = "1.0-beta2"
 projects[m4032404][subdir] = "contrib"
 
 ; Digital asset management.
@@ -142,10 +142,6 @@ projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
 projects[media_browser_plus][version] = "1.0-beta3"
 projects[media_browser_plus][subdir] = "contrib"
 
-; More efficient caching - consider replacing with redis.
-projects[memcache][version] = "1.0"
-projects[memcache][subdir] = "contrib"
-
 ; Alternative video source.
 projects[media_vimeo][version] = "1.0-beta5"
 projects[media_vimeo][subdir] = "contrib"
@@ -154,8 +150,12 @@ projects[media_vimeo][subdir] = "contrib"
 projects[media_youtube][version] = "1.0-beta3"
 projects[media_youtube][subdir] = "contrib"
 
+; More efficient caching - consider replacing with redis.
+projects[memcache][version] = "1.0"
+projects[memcache][subdir] = "contrib"
+
 ; One module dev environment setup.
-projects[meta_dev][version] = "1.0-beta1"
+projects[meta_dev][version] = "1.0-beta2"
 projects[meta_dev][subdir] = "dev"
 
 ; Lightweight meta tags.
@@ -174,7 +174,7 @@ projects[multiple_node_menu][version] = "1.0-beta1"
 projects[multiple_node_menu][subdir] = "contrib"
 
 ; Backport of the Drupal 8 responsive navigation toolbar
-projects[navbar][version] = "1.0-alpha7"
+projects[navbar][version] = "1.0-alpha10"
 projects[navbar][subdir] = "contrib"
 
 ; SEO friendly URLs.
@@ -230,11 +230,11 @@ projects[uuid_link][subdir] = "contrib"
 ;projects[variable][subdir] = "contrib"
 
 ; Custom data lists.
-projects[views][version] = "3.6"
+projects[views][version] = "3.7"
 projects[views][subdir] = "contrib"
 
 ; Data capture forms.
-projects[webform][version] = "3.18"
+projects[webform][version] = "3.19"
 projects[webform][subdir] = "contrib"
 
 ; WYSIWYG editor.
@@ -276,4 +276,3 @@ libraries[ckeditor][download][type]= "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6/ckeditor_3.6.6.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
-
