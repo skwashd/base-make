@@ -30,8 +30,8 @@ projects[drupal] = 7.23
 
 ; Drill down admin menu.
 ; Prefer to use navbar module instead now.
-; projects[admin][version] = "2.0-beta3"
-; projects[admin][subdir] = "contrib"
+projects[admin][version] = "2.0-beta3"
+projects[admin][subdir] = "contrib"
 
 ; Core site search doesn't scale, we should always use Solr.
 projects[apachesolr][version] = "1.4"
