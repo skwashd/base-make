@@ -131,7 +131,7 @@ projects[media][subdir] = "contrib"
 ;projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
 
 ; Improved front end for selecting assets.
-projects[media_browser_plus][version] = "7.x-3.0-beta2"
+projects[media_browser_plus][version] = "3.0-beta2"
 projects[media_browser_plus][subdir] = "contrib"
 
 ; Alternative video source.
