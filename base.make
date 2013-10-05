@@ -12,7 +12,7 @@ core = 7.x
 ;
 ;
 
-projects[drupal] = 7.22
+projects[drupal] = 7.23
 
 ;
 ;
@@ -25,7 +25,7 @@ projects[drupal] = 7.22
 ;
 
 ; Enable for clients using Acquia Network.
-;projects[acquia_connector][version] = "2.10"
+;projects[acquia_connector][version] = "2.12"
 ;projects[acquia_connector][subdir] = "contrib"
 
 ; Drill down admin menu.
@@ -34,16 +34,12 @@ projects[drupal] = 7.22
 ; projects[admin][subdir] = "contrib"
 
 ; Core site search doesn't scale, we should always use Solr.
-projects[apachesolr][version] = "1.3"
+projects[apachesolr][version] = "1.4"
 projects[apachesolr][subdir] = "contrib"
 
 ; Block as entities.
 projects[bean][version] = "1.2"
 projects[bean][subdir] = "contrib"
-
-; Dependency for navbar module.
-projects[breakpoints][version] = "1.1"
-projects[breakpoints][subdir] = "contrib"
 
 ; The CDN module helps improve page load times, even without a CDN.
 projects[cdn][version] = "2.6"
@@ -54,7 +50,7 @@ projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
 ; Context for layout management.
-projects[context][version] = "3.0-beta6"
+projects[context][version] = "3.0-rc1"
 projects[context][subdir] = "contrib"
 
 ; Context UUID for UUID aware context conditions
@@ -74,7 +70,7 @@ projects[embed_assets_field][version] = "1.0-alpha1"
 projects[embed_assets_field][subdir] = "contrib"
 
 ; UUID needs Entity API as can most custom modules.
-projects[entity][version] = "1.1"
+projects[entity][version] = "1.2"
 ; Add file create support - breaks entity tests
 projects[entity][patch][file-create][url] = "http://drupal.org/files/entity-1741028-file-creation-callback.patch"
 projects[entity][patch][file-create][md5] = "efabb88785272e029a9c04dee35a9895"
@@ -82,6 +78,10 @@ projects[entity][patch][file-create][md5] = "efabb88785272e029a9c04dee35a9895"
 projects[entity][patch][file-uri][url] = "https://drupal.org/files/entity-1481372-entity_uri_file.patch"
 projects[entity][patch][file-uri][md5] = "4c13c2a7d79bd4971218e14504e521ed"
 projects[entity][subdir] = "contrib"
+
+; Data capture forms.
+projects[entityform][version] = "1.1"
+projects[entityform][subdir] = "contrib"
 
 ; Entity Reference is the most efficient way to reference entities.
 projects[entityreference][version] = "1.0"
@@ -92,13 +92,8 @@ projects[fast_404][version] = "1.3"
 projects[fast_404][subdir] = "contrib"
 
 ; The best way to export configuration in Drupal 7 with the improved UI.
-projects[features][version] = "2.0-rc1"
+projects[features][version] = "2.0-rc4"
 projects[features][subdir] = "contrib"
-
-; Helper module for building features.
-; Commented out as it doesn't work with features 2.x
-;projects[features_orphans][version] = "1.2"
-;projects[features_orphans][subdir] = "contrib"
 
 ; Feeds is great for migating/importing data.
 ;projects[feeds][version] = "2.0-alpha8"
@@ -109,7 +104,7 @@ projects[globalredirect][version] = "1.5"
 projects[globalredirect][subdir] = "contrib"
 
 ; Use for multilingual sites.
-;projects[i18n][version] = "1.9"
+;projects[i18n][version] = "1.10"
 ;projects[i18n][subdir] = "contrib"
 
 ; Dependency for Feeds
@@ -120,10 +115,6 @@ projects[globalredirect][subdir] = "contrib"
 projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
-; Enable when geographic data is needed.
-;projects[location][version] = "3.0-rc2"
-;projects[location][subdir] = "contrib"
-
 ; Library handling
 projects[libraries] = "2.1"
 projects[libraries][subdir] = "contrib"
@@ -133,21 +124,21 @@ projects[m4032404][version] = "1.0-beta2"
 projects[m4032404][subdir] = "contrib"
 
 ; Digital asset management.
-projects[media][version] = "1.3"
+projects[media][version] = "2.0-alpha2"
 projects[media][subdir] = "contrib"
 projects[media][patch][uuid-support][url] = "http://drupal.org/files/1515788.patch"
 projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
 
 ; Improved front end for selecting assets.
-projects[media_browser_plus][version] = "1.0-beta3"
+projects[media_browser_plus][version] = "7.x-3.0-beta2"
 projects[media_browser_plus][subdir] = "contrib"
 
 ; Alternative video source.
-projects[media_vimeo][version] = "1.0-beta5"
+projects[media_vimeo][version] = "2.0-rc1"
 projects[media_vimeo][subdir] = "contrib"
 
 ; Most sites need embedded video.
-projects[media_youtube][version] = "1.0-beta3"
+projects[media_youtube][version] = "2.0-rc3"
 projects[media_youtube][subdir] = "contrib"
 
 ; More efficient caching - consider replacing with redis.
@@ -163,19 +154,12 @@ projects[metatags_quick][version] = "2.7"
 projects[metatags_quick][subdir] = "contrib"
 
 ; Improved module admin page.
-projects[module_filter][version] = "1.7"
+projects[module_filter][version] = "1.8"
 projects[module_filter][subdir] = "contrib"
-; Makes module filter work with latest jQuery UI.
-projects[module_filter][patch][jqueryup-fix][url] = "https://drupal.org/files/jquery-ui-button-makes-module-filter-fail-1933384-2.patch"
-projects[module_filter][patch][jqueryup-fix][md5] = "06e5f34c68244e95ad3f01619870b731"
 
 ; Better UI of nodes in multiple menus.
 projects[multiple_node_menu][version] = "1.0-beta1"
 projects[multiple_node_menu][subdir] = "contrib"
-
-; Backport of the Drupal 8 responsive navigation toolbar
-projects[navbar][version] = "1.0-alpha10"
-projects[navbar][subdir] = "contrib"
 
 ; SEO friendly URLs.
 projects[pathauto][version] = "1.2"
@@ -206,6 +190,8 @@ projects[rss_permissions][subdir] = "contrib"
 ; Export variables using features.
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
+projects[strongarm][patch][hook-alter][url] = "https://drupal.org/files/strongarm-2076543-import-export-value-alter-hooks.patch"
+projects[strongarm][patch][hook-alter][md5] = "1c29a705964d5dbb03c33eb119a53cc7"
 
 ; Data placeholders.
 projects[token][version] = "1.5"
@@ -226,16 +212,12 @@ projects[uuid_link][version] = "1.0-beta3"
 projects[uuid_link][subdir] = "contrib"
 
 ; i18n support for variables.
-;projects[variable][version] = "2.2"
+;projects[variable][version] = "2.3"
 ;projects[variable][subdir] = "contrib"
 
 ; Custom data lists.
 projects[views][version] = "3.7"
 projects[views][subdir] = "contrib"
-
-; Data capture forms.
-projects[webform][version] = "3.19"
-projects[webform][subdir] = "contrib"
 
 ; WYSIWYG editor.
 projects[wysiwyg][version] = "2.2"
@@ -273,6 +255,6 @@ projects[shiny] = "1.1"
 
 ; CKEditor for WYSIWYG - consider switching Aloha when it stablises.
 libraries[ckeditor][download][type]= "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6/ckeditor_3.6.6.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
