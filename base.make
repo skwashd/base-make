@@ -126,8 +126,9 @@ projects[m4032404][subdir] = "contrib"
 ; Digital asset management.
 projects[media][version] = "2.0-alpha2"
 projects[media][subdir] = "contrib"
-projects[media][patch][uuid-support][url] = "http://drupal.org/files/1515788.patch"
-projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
+; This patch needs to be ported to 7.x-2.x
+;projects[media][patch][uuid-support][url] = "http://drupal.org/files/1515788.patch"
+;projects[media][patch][uuid-support][md5] = "f761f1a134c48e8a40bfbbefacf75237"
 
 ; Improved front end for selecting assets.
 projects[media_browser_plus][version] = "7.x-3.0-beta2"
